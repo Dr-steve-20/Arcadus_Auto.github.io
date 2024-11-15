@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCam - Pièces Détachées</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/parts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="AutoCam Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="vehicles.html">Véhicules</a>
+                <a href="parts.html" class="active">Pièces détachées</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contactez-nous</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="parts-container">
+        <aside class="filters-sidebar">
+            <h2>Filtres</h2>
+            <div class="search-box">
+                <input type="text" placeholder="Rechercher une pièce...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="filter-section">
+                <h3>Catégorie</h3>
+                <select id="category">
+                    <option value="">Toutes les catégories</option>
+                    <option value="engine">Moteur</option>
+                    <option value="transmission">Transmission</option>
+                    <option value="suspension">Suspension</option>
+                    <option value="brakes">Freinage</option>
+                    <option value="electrical">Électrique</option>
+                    <option value="body">Carrosserie</option>
+                    <option value="interior">Intérieur</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>Sous-catégorie</h3>
+                <select id="subcategory" disabled>
+                    <option value="">Sélectionnez d'abord une catégorie</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>État</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="new"> Neuf</label>
+                    <label><input type="checkbox" value="used"> Occasion</label>
+                    <label><input type="checkbox" value="refurbished"> Reconditionné</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Ville</h3>
+                <select id="city">
+                    <option value="">Toutes les villes</option>
+                    <option value="yaounde">Yaoundé</option>
+                    <option value="douala">Douala</option>
+                    <option value="bafoussam">Bafoussam</option>
+                    <option value="garoua">Garoua</option>
+                    <option value="maroua">Maroua</option>
+                </select>
+            </div>
+
+            <button class="apply-filters">Appliquer les filtres</button>
+            <button class="reset-filters">Réinitialiser</button>
+        </aside>
+
+        <section class="parts-content">
+            <div class="parts-description">
+                <h2>Nos Pièces Détachées</h2>
+                <p>Découvrez notre large sélection de pièces détachées authentiques pour tous types de véhicules. 
+                Nous garantissons la qualité et l'origine de toutes nos pièces pour assurer la fiabilité et la 
+                sécurité de votre véhicule.</p>
+            </div>
+
+            <div class="parts-grid">
+                <!-- Exemple de carte de pièce détachée -->
+                <article class="part-card">
+                    <div class="part-images">
+                        <div class="image-slider">
+                            <img src="assets/images/parts/brake-pad-1.jpg" alt="Plaquettes de frein">
+                            <img src="assets/images/parts/brake-pad-2.jpg" alt="Plaquettes de frein">
+                            <img src="assets/images/parts/brake-pad-3.jpg" alt="Plaquettes de frein">
+                        </div>
+                        <div class="slider-controls">
+                            <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="part-info">
+                        <h3>Plaquettes de frein Toyota Camry</h3>
+                        <div class="part-details">
+                            <span><i class="fas fa-tag"></i> État: Neuf</span>
+                            <span><i class="fas fa-car"></i> Compatible: Toyota Camry 2018-2022</span>
+                            <span><i class="fas fa-certificate"></i> Marque: TRW</span>
+                        </div>
+                        <div class="part-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Yaoundé, Marché Central</span>
+                        </div>
+                        <div class="part-price">
+                            <span>25,000 FCFA</span>
+                            <div class="part-actions">
+                                <button class="contact-seller">Contacter le vendeur</button>
+                                <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- D'autres cartes de pièces seront ajoutées dynamiquement -->
+            </div>
+
+            <div class="pagination">
+                <button class="prev-page" disabled><i class="fas fa-chevron-left"></i></button>
+                <span class="current-page">Page 1</span>
+                <button class="next-page"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="AutoCam Logo" class="footer-logo">
+                <p>Votre partenaire de confiance pour l'automobile au Cameroun</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <a href="index.html">Accueil</a>
+                    <a href="vehicles.html">Véhicules</a>
+                    <a href="parts.html">Pièces détachées</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Yaoundé, Cameroun</p>
+                    <p>Tel: +237 XXX XXX XXX</p>
+                    <p>Email: contact@Arcadus_Auto.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Arcadus Auto. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/parts.js"></script>
+</body>
+</html>

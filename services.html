@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCam - Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="AutoCam Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="vehicles.html">Véhicules</a>
+                <a href="parts.html">Pièces détachées</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="contact.html">Contactez-nous</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="services-container">
+        <section class="services-hero">
+            <h1>Nos Services Automobiles</h1>
+            <p>Des solutions complètes pour l'entretien et la réparation de votre véhicule</p>
+        </section>
+
+        <section class="services-grid">
+            <article class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Maintenance Générale</h3>
+                <p>Services d'entretien régulier pour garder votre véhicule en parfait état</p>
+                <ul>
+                    <li>Vidange d'huile</li>
+                    <li>Filtres</li>
+                    <li>Courroies</li>
+                    <li>Diagnostics</li>
+                </ul>
+                <button class="book-service">Prendre rendez-vous</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-car-battery"></i>
+                </div>
+                <h3>Système Électrique</h3>
+                <p>Diagnostic et réparation de tous les composants électriques</p>
+                <ul>
+                    <li>Batterie</li>
+                    <li>Démarreur</li>
+                    <li>Alternateur</li>
+                    <li>Système d'éclairage</li>
+                </ul>
+                <button class="book-service">Prendre rendez-vous</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-car-crash"></i>
+                </div>
+                <h3>Carrosserie</h3>
+                <p>Réparation et restauration de carrosserie professionnelle</p>
+                <ul>
+                    <li>Débosselage</li>
+                    <li>Peinture</li>
+                    <li>Traitement antirouille</li>
+                    <li>Polissage</li>
+                </ul>
+                <button class="book-service">Prendre rendez-vous</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <h3>Mécanique Générale</h3>
+                <p>Réparations mécaniques complètes pour tous types de véhicules</p>
+                <ul>
+                    <li>Moteur</li>
+                    <li>Transmission</li>
+                    <li>Embrayage</li>
+                    <li>Suspension</li>
+                </ul>
+                <button class="book-service">Prendre rendez-vous</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3>Diagnostics</h3>
+                <p>Diagnostics précis avec équipements de dernière génération</p>
+                <ul>
+                    <li>Lecture codes erreur</li>
+                    <li>Tests systèmes</li>
+                    <li>Analyse performance</li>
+                    <li>Rapports détaillés</li>
+                </ul>
+                <button class="book-service">Prendre rendez-vous</button>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <h3>Climatisation</h3>
+                <p>Service complet de climatisation automobile</p>
+                <ul>
+                    <li>Recharge</li>
+                    <li>Réparation</li>
+                    <li>Nettoyage circuit</li>
+                    <li>Désinfection</li>
+                </ul>
+                <button class="book-service">Prendre rendez-vous</button>
+            </article>
+        </section>
+
+        <section class="service-booking">
+            <h2>Réserver un Service</h2>
+            <form id="booking-form" class="booking-form">
+                <div class="form-group">
+                    <label for="service-type">Type de service</label>
+                    <select id="service-type" required>
+                        <option value="">Sélectionnez un service</option>
+                        <option value="maintenance">Maintenance Générale</option>
+                        <option value="electrical">Système Électrique</option>
+                        <option value="bodywork">Carrosserie</option>
+                        <option value="mechanical">Mécanique Générale</option>
+                        <option value="diagnostic">Diagnostics</option>
+                        <option value="ac">Climatisation</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicle-info">Informations du véhicule</label>
+                    <input type="text" id="vehicle-info" placeholder="Marque, Modèle, Année" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="preferred-date">Date souhaitée</label>
+                        <input type="date" id="preferred-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferred-time">Heure souhaitée</label>
+                        <input type="time" id="preferred-time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description du problème</label>
+                    <textarea id="description" rows="4" placeholder="Décrivez le problème ou le service souhaité"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <button type="submit" class="submit-booking">Confirmer la réservation</button>
+            </form>
+        </section>
+
+        <section class="service-testimonials">
+            <h2>Témoignages Clients</h2>
+            <div class="testimonials-slider">
+                <!-- Les témoignages seront ajoutés dynamiquement via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="AutoCam Logo" class="footer-logo">
+                <p>Votre partenaire de confiance pour l'automobile au Cameroun</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <a href="index.html">Accueil</a>
+                    <a href="vehicles.html">Véhicules</a>
+                    <a href="parts.html">Pièces détachées</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Yaoundé, Cameroun</p>
+                    <p>Tel: +237 XXX XXX XXX</p>
+                    <p>Email: contact@Arcadus_Auto.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Arcadus Auto. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

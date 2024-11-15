@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCam - Véhicules</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vehicles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Arcadus Auto Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="vehicles.html" class="active">Véhicules</a>
+                <a href="parts.html">Pièces détachées</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contactez-nous</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="vehicles-container">
+        <aside class="filters-sidebar">
+            <h2>Filtres</h2>
+            <div class="search-box">
+                <input type="text" placeholder="Rechercher un véhicule...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="filter-section">
+                <h3>Marque</h3>
+                <select id="brand">
+                    <option value="">Toutes les marques</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="honda">Honda</option>
+                    <option value="mercedes">Mercedes</option>
+                    <!-- Autres marques -->
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>Modèle</h3>
+                <select id="model" disabled>
+                    <option value="">Sélectionnez d'abord une marque</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>Année</h3>
+                <div class="year-range">
+                    <select id="year-min">
+                        <option value="">Depuis</option>
+                        <!-- Options générées en JS -->
+                    </select>
+                    <select id="year-max">
+                        <option value="">Jusqu'à</option>
+                        <!-- Options générées en JS -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>État</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="new"> Neuf</label>
+                    <label><input type="checkbox" value="used"> Occasion</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Transmission</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="automatic"> Automatique</label>
+                    <label><input type="checkbox" value="manual"> Manuelle</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Carburant</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="gasoline"> Essence</label>
+                    <label><input type="checkbox" value="diesel"> Diesel</label>
+                    <label><input type="checkbox" value="hybrid"> Hybride</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Kilométrage</h3>
+                <div class="range-slider">
+                    <input type="range" min="0" max="300000" step="5000" value="300000">
+                    <span class="range-value">300 000 km</span>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Ville</h3>
+                <select id="city">
+                    <option value="">Toutes les villes</option>
+                    <option value="yaounde">Yaoundé</option>
+                    <option value="douala">Douala</option>
+                    <!-- Autres villes -->
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>Couleur</h3>
+                <div class="color-options">
+                    <span class="color-option" style="background-color: #000000;" data-color="black"></span>
+                    <span class="color-option" style="background-color: #FFFFFF;" data-color="white"></span>
+                    <span class="color-option" style="background-color: #FF0000;" data-color="red"></span>
+                    <!-- Autres couleurs -->
+                </div>
+            </div>
+
+            <button class="apply-filters">Appliquer les filtres</button>
+            <button class="reset-filters">Réinitialiser</button>
+        </aside>
+
+        <section class="vehicles-grid">
+            <!-- Exemple de carte de véhicule -->
+            <article class="vehicle-card">
+                <div class="vehicle-images">
+                    <div class="image-slider">
+                        <img src="assets/images/vehicles/toyota-camry-1.jpg" alt="Toyota Camry">
+                        <img src="assets/images/vehicles/toyota-camry-2.jpg" alt="Toyota Camry">
+                        <img src="assets/images/vehicles/toyota-camry-3.jpg" alt="Toyota Camry">
+                    </div>
+                    <div class="slider-controls">
+                        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="vehicle-info">
+                    <h3>Toyota Camry 2020</h3>
+                    <div class="vehicle-details">
+                        <span><i class="fas fa-tachometer-alt"></i> 45,000 km</span>
+                        <span><i class="fas fa-gas-pump"></i> Essence</span>
+                        <span><i class="fas fa-cog"></i> Automatique</span>
+                    </div>
+                    <div class="vehicle-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Yaoundé, Bastos</span>
+                    </div>
+                    <div class="vehicle-price">
+                        <span>12,500,000 FCFA</span>
+                        <button class="contact-seller">Contacter le vendeur</button>
+                    </div>
+                </div>
+            </article>
+            <!-- D'autres cartes de véhicules seront ajoutées dynamiquement -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="AutoCam Logo" class="footer-logo">
+                <p>Votre partenaire de confiance pour l'automobile au Cameroun</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <a href="index.html">Accueil</a>
+                    <a href="vehicles.html">Véhicules</a>
+                    <a href="parts.html">Pièces détachées</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Yaoundé, Cameroun</p>
+                    <p>Tel: +237 XXX XXX XXX</p>
+                    <p>Email: contact@Arcauds_Auto.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Arcadus Auto. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/navbar.js"></script>
+    <script src="js/vehicles.js"></script>
+</body>
+</html>

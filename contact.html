@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCam - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="AutoCam Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="vehicles.html">Véhicules</a>
+                <a href="parts.html">Pièces détachées</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" class="active">Contactez-nous</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-hero">
+            <h1>Contactez-nous</h1>
+            <p>Notre équipe est à votre disposition pour répondre à toutes vos questions</p>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Nos Adresses</h3>
+                    <div class="location-list">
+                        <div class="location">
+                            <h4>Yaoundé (Siège)</h4>
+                            <p>Quartier Bastos, Rue 1.234</p>
+                            <p>BP: 1234</p>
+                        </div>
+                        <div class="location">
+                            <h4>Douala</h4>
+                            <p>Quartier Akwa, Avenue 5.678</p>
+                            <p>BP: 5678</p>
+                        </div>
+                        <div class="location">
+                            <h4>Bafoussam</h4>
+                            <p>Quartier Tamdja, Rue 9.012</p>
+                            <p>BP: 9012</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Téléphone</h3>
+                    <div class="phone-list">
+                        <div class="phone-item">
+                            <span>Service Client:</span>
+                            <a href="tel:+237XXXXXXXXX">+237 XXX XXX XXX</a>
+                        </div>
+                        <div class="phone-item">
+                            <span>Service Technique:</span>
+                            <a href="tel:+237XXXXXXXXX">+237 XXX XXX XXX</a>
+                        </div>
+                        <div class="phone-item">
+                            <span>WhatsApp:</span>
+                            <a href="https://wa.me/237XXXXXXXXX">+237 XXX XXX XXX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <div class="email-list">
+                        <a href="mailto:info@autocam.com">info@autocam.com</a>
+                        <a href="mailto:service@autocam.com">service@autocam.com</a>
+                        <a href="mailto:commercial@autocam.com">commercial@autocam.com</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Horaires d'ouverture</h3>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span>Lundi - Vendredi:</span>
+                            <span>08:00 - 18:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Samedi:</span>
+                            <span>09:00 - 15:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Dimanche:</span>
+                            <span>Fermé</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2>Envoyez-nous un message</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="general">Renseignement général</option>
+                                <option value="sales">Achat véhicule</option>
+                                <option value="parts">Pièces détachées</option>
+                                <option value="service">Service après-vente</option>
+                                <option value="complaint">Réclamation</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group files-upload">
+                        <label>Documents joints (optionnel)</label>
+                        <input type="file" id="attachments" name="attachments" multiple>
+                        <small>Formats acceptés: PDF, JPG, PNG (Max 5MB)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            J'accepte que mes données soient traitées conformément à la politique de confidentialité
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i>
+                        Envoyer le message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Nos Emplacements</h2>
+            <div class="map-container">
+                <!-- La carte sera chargée ici via JavaScript -->
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Questions Fréquentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Comment puis-je obtenir un devis pour une réparation ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez obtenir un devis en nous contactant par téléphone, email ou en vous rendant directement dans l'une de nos agences. Notre équipe technique évaluera votre véhicule et vous fournira un devis détaillé.</p>
+                    </div>
+                </div>
+                <!-- D'autres questions FAQ seront ajoutées dynamiquement via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/images/logo.png" alt="AutoCam Logo" class="footer-logo">
+                <p>Votre partenaire de confiance pour l'automobile au Cameroun</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <a href="index.html">Accueil</a>
+                    <a href="vehicles.html">Véhicules</a>
+                    <a href="parts.html">Pièces détachées</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Yaoundé, Cameroun</p>
+                    <p>Tel: +237 XXX XXX XXX</p>
+                    <p>Email: contact@Arcadus_Auto.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Arcadus Auto. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
